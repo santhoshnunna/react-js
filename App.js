@@ -13,6 +13,10 @@
  * ReactElement(Object) => HTML(Browser understands)
  * 
  */
+//React.createElement() => Object => HTMLElement(render)
+
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 const parent = React.createElement("div",{ id: "parent" },
     [
@@ -38,3 +42,11 @@ const parent = React.createElement("div",{ id: "parent" },
 console.log(parent);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent); //It will replace with the root
+
+//JSX => Java Script syntax for creating React Elements
+//JSX => is not HTML inside JS ; HTML like or XML like syntax
+//JSX (transpiled before it reaches the Java Script Engine) - PARCEL - Babel package
+//JSX => React.createElement() => ReactElement - JS Object => HTMLElement(render)
+const jsxHeading = <h1> Welcome to React!</h1>;
+const root1 = ReactDOM.createRoot(document.getElementById("root"));
+root1.render(jsxHeading); //It will replace with the root
